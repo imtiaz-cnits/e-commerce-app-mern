@@ -1,0 +1,6 @@
+DB Info - 
+
+User - ia64744
+Pass - 92hT09Zwqu48M7De
+
+Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/
