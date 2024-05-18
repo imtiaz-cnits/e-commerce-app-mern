@@ -1,0 +1,35 @@
+DB Info - 
+
+User - ia64744
+Pass - 92hT09Zwqu48M7De
+
+Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/
+
+
+// Process of Start working on projects
+1. Design Database with Moon Modeller
+2. Setup Folder Structure
+    a. create "client" directory for front-end
+    b. create "src" directory for back-end
+    c. create "controllers" folder and create necessary controller js files for the projects
+    d. create "middlewares" folder and create necessary middlewares js files for the projects
+    e. create "models" folder and create necessary models js files for the projects
+    f. create "routes" folder and create api.js file
+    g. create "services" folder and create necessary js files for the projects
+    g. create "utility" folder and create necessary js files for the projects
+3. create app.js file for back-end
+4. create index.js file for back-end
+5. Run 'npm init --y' for back-end in terminal
+6. Run 'npm i' for back-end in terminal
+7. Run 'cd client' command in terminal
+    a. run 'npm create vite@latest' to install vite
+8. Install some packages:-
+    a. run command in 'npm i cors'
+    b. run command in 'npm i express-rate-limit'
+    c. run command in 'npm i helmet'
+    d. run command in 'npm i express-mongo-sanitize'
+    e. run command in 'npm i hpp'
+    f. run command in 'npm i cookieParser'
+    g. run command in 'npm i mongoose'
+    h. run command in 'npm i path'
+9. Create a Database for project in "MongoDB Atlas" and get connection string + username + password
