@@ -1,6 +1,8 @@
 const express = require("express");
+const ProductController = require("../controllers/ProductController");
 const router = express.Router();
 
-// Brand Category
+// Products
+router.get("/ProductBrandList", ProductController.ProductBrandList);
 
 module.exports = router;
