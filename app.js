@@ -7,15 +7,15 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const hpp = require("hpp");
 const cors = require("cors");
-const cookieParser = require("cookieParser");
+const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 
 //Database Connection
-let URL = "mongodb+srv://<username>:<password>@cluster0.zfowx7c.mongodb.net/";
+let URL = "mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/";
 let option = {
-  username: "ia64744",
-  password: "92hT09Zwqu48M7De",
+  user: "",
+  pass: "",
   autoIndex: true,
 };
 mongoose
