@@ -19,11 +19,11 @@ Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mong
     g. create "utility" folder and create necessary js files for the projects
 3. create app.js file for back-end
 4. create index.js file for back-end
-5. Run 'npm init --y' for back-end in terminal
+5. Run 'npm init --y' for back-end in terminal for creating package.json file
 6. Run 'npm i' for back-end in terminal
 7. Run 'cd client' command in terminal
     a. run 'npm create vite@latest' to install vite
-8. Install some packages:-
+8. Install some packages for for back-end:-
     a. run command in 'npm i cors'
     b. run command in 'npm i express-rate-limit'
     c. run command in 'npm i helmet'

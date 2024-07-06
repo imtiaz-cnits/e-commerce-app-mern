@@ -12,7 +12,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 //Database Connection
-let URL = "mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/";
+let URL =
+  "mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/MERN_ECOMM";
 let option = {
   user: "",
   pass: "",
