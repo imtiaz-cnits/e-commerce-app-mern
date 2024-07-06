@@ -3,42 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9713ffb2-3cea-4cc7-a64b-fcff39c834e2" name="Changes" comment="product service ongoing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/xss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/xss.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/xss.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/typings/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/lib/css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/lib/default.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/lib/parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/lib/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cssfilter/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/README.zh.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/bin/xss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/dist/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/dist/xss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/dist/xss.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/cli.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/default.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/lib/xss.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/xss/typings/xss.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProductController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/ProductServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductServices.js" afterDir="false" />
     </list>
@@ -61,16 +25,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -95,7 +59,8 @@
       <workItem from="1719686250546" duration="410000" />
       <workItem from="1719686673299" duration="65000" />
       <workItem from="1719686749195" duration="155000" />
-      <workItem from="1719686919664" duration="4715000" />
+      <workItem from="1719686919664" duration="5280000" />
+      <workItem from="1720293815885" duration="1852000" />
     </task>
     <task id="LOCAL-00001" summary="product service ongoing">
       <created>1719687332263</created>
@@ -131,7 +96,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/services/ProductServices.js</url>
           <line>10</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
