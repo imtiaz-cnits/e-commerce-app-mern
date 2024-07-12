@@ -97,7 +97,36 @@ const ListByCategoryService = async (req) => {
   }
 };
 
-const ListBySimilarService = async () => {};
+const ListBySimilarService = async () => {
+  try {
+    let CategoryID = new ObjectID(req.params.CategoryID);
+
+    let MatchStage = {$match: {categoryID: CategoryID}};
+    let limitStage = {$limit: 20};
+    let JoinWithBrandStage = {$lookup: {from: "brands", localField: "brandID", foreignField: "_id", as: "brand"}};
+    let JoinWithCategoryStage = {$lookup: {from: "categories", localField: "categoryID", foreignField: "_id", as: "category"}};
+
+    let UnwindBrandStage = {$unwind: "$brand"};
+    let UnwindCategoryStage = {$unwind: "$category"};
+
+    let ProjectionStage = {$project: {'brand._id': 0, 'category._id': 0, 'brandID': 0, 'categoryID': 0}};
+
+    let data = await ProductModel.aggregate([
+      MatchStage,
+      limitStage,
+      JoinWithBrandStage,
+      JoinWithCategoryStage,
+      UnwindBrandStage,
+      UnwindCategoryStage,
+      ProjectionStage
+    ]);
+
+    return { status: "Success", data: data };
+  }
+  catch (e) {
+    return { status: "Fail", data: e }.toString();
+  }
+};
 
 const ListByKeywordService = async () => {};
 
