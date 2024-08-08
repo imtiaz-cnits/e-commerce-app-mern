@@ -48,6 +48,9 @@ exports.ProductListByRemark = async (req, res) => {
   return res.status(200).json(result);
 };
 
-exports.ProductDetails = async (req, res) => {};
+exports.ProductDetails = async (req, res) => {
+  let result = await this.ProductDetails(req);
+  return res.status(200).json(result);
+};
 
 exports.ProductReviewList = async (req, res) => {};
