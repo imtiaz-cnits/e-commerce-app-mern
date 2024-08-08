@@ -240,28 +240,57 @@ const ListByRemarkService = async (req) => {
 // <<<<< ---------- Working Here Now ------------ >>>>>>>
 
 const DetailsService = async () => {
-    let ProductID = new ObjectID(req.params.ProductID);
-    let MatchStage = {$match: {productID: ProductID}};
+    try {
+        let ProductID = new ObjectID(req.params.ProductID);
+        let MatchStage = {$match: {productID: ProductID}};
 
-    let JoinWithBrandStage = {
-        $lookup: {
-            from: "brands",
-            localField: "brandID",
-            foreignField: "_id",
-            as: "brand",
-        },
-    };
-    let JoinWithCategoryStage = {
-        $lookup: {
-            from: "categories",
-            localField: "categoryID",
-            foreignField: "_id",
-            as: "category",
-        },
-    };
+        let JoinWithBrandStage = {
+            $lookup: {
+                from: "brands",
+                localField: "brandID",
+                foreignField: "_id",
+                as: "brand",
+            },
+        };
+        let JoinWithCategoryStage = {
+            $lookup: {
+                from: "categories",
+                localField: "categoryID",
+                foreignField: "_id",
+                as: "category",
+            },
+        };
+        let JoinWithDetailsStage = {
+            $lookup: {
+                from: "productdetails",
+                localField: "_id",
+                foreignField: "productID",
+                as: "details",
+            },
+        };
 
-    let UnwindBrandStage = {$unwind: "$brand"};
-    let UnwindCategoryStage = {$unwind: "$category"};
+        let UnwindBrandStage = {$unwind: "$brand"};
+        let UnwindCategoryStage = {$unwind: "$category"};
+        let UnwindDetailsStage = {$unwind: "$details"};
+
+        let ProjectionStage = {$project: { "brand._id": 0, "category._id": 0, brandID: 0, categoryID: 0 }};
+
+        let data = await ProductModel.aggregate([
+            MatchStage,
+            JoinWithBrandStage,
+            JoinWithCategoryStage,
+            JoinWithDetailsStage,
+            UnwindBrandStage,
+            UnwindCategoryStage,
+            UnwindDetailsStage,
+            ProjectionStage
+        ])
+
+        return {status: "Success", data: data};
+    }
+    catch (e) {
+        return {status: "Fail", data: e}.toString();
+    }
 };
 
 // <<<<< ---------- Working Here Now ------------ >>>>>>>
