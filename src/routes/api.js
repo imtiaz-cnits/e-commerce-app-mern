@@ -15,7 +15,7 @@ router.get(
   ProductController.ProductListByCategory
 );
 router.get(
-  "/ProductListBySimilar/:Keyword",
+  "/ProductListBySimilar/:CategoryID",
   ProductController.ProductListBySimilar
 );
 router.get(
