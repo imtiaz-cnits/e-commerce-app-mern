@@ -32,4 +32,38 @@ Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mong
     f. run command in 'npm i cookieParser'
     g. run command in 'npm i mongoose'
     h. run command in 'npm i path'
-9. Create a Database for project in "MongoDB Atlas" and get connection string + username + password
+9. Create a Database for project in "MongoDB Atlas" and get connection string + username + password.
+.
+.
+.
+.
+.
+.
+.
+
+10. Create 'utility' folder and create 2 file named - 'EmailHelper.js' & 'TokenHelper.js'.
+11. write codes in 'EmailHelper.js'.
+12. write codes in 'TokenHelper.js'.
+13. Create 'middlewares' folder and create file named - 'AuthVerification.js', write codes in 'AuthVerification.js'.
+14.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

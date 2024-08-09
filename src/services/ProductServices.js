@@ -133,7 +133,7 @@ const ListByCategoryService = async (req) => {
     }
 };
 
-const ListBySimilarService = async () => {
+const ListBySimilarService = async (req) => {
     try {
         let CategoryID = new ObjectID(req.params.CategoryID);
 
@@ -184,7 +184,58 @@ const ListBySimilarService = async () => {
     }
 };
 
-const ListByKeywordService = async () => {
+const ListByKeywordService = async (req) => {
+    try {
+        let SearchRegex = {"$regex": req.params.Keyword, "$options": "i"};
+        let SearchParams = [{title: SearchRegex}, {shortDes: SearchRegex}];
+        let SearchQuery = {$or: SearchParams};
+
+        let MatchStage = {$match: SearchQuery};
+
+        let limitStage = {$limit: 20};
+        let JoinWithBrandStage = {
+            $lookup: {
+                from: "brands",
+                localField: "brandID",
+                foreignField: "_id",
+                as: "brand",
+            },
+        };
+        let JoinWithCategoryStage = {
+            $lookup: {
+                from: "categories",
+                localField: "categoryID",
+                foreignField: "_id",
+                as: "category",
+            },
+        };
+
+        let UnwindBrandStage = {$unwind: "$brand"};
+        let UnwindCategoryStage = {$unwind: "$category"};
+
+        let ProjectionStage = {
+            $project: {
+                "brand._id": 0,
+                "category._id": 0,
+                brandID: 0,
+                categoryID: 0,
+            },
+        };
+
+        let data = await ProductModel.aggregate([
+            MatchStage,
+            limitStage,
+            JoinWithBrandStage,
+            JoinWithCategoryStage,
+            UnwindBrandStage,
+            UnwindCategoryStage,
+            ProjectionStage,
+        ]);
+        return {status: "Success", data: data};
+    }
+    catch (e) {
+        return {status: "Fail", data: e}.toString();
+    }
 };
 
 const ListByRemarkService = async (req) => {
@@ -236,13 +287,10 @@ const ListByRemarkService = async (req) => {
     }
 };
 
-
-// <<<<< ---------- Working Here Now ------------ >>>>>>>
-
-const DetailsService = async () => {
+const DetailsService = async (req) => {
     try {
         let ProductID = new ObjectID(req.params.ProductID);
-        let MatchStage = {$match: {productID: ProductID}};
+        let MatchStage = {$match: {_id: ProductID}};
 
         let JoinWithBrandStage = {
             $lookup: {
@@ -293,11 +341,48 @@ const DetailsService = async () => {
     }
 };
 
+
+
+// <<<<< ---------- Working Here Now ------------ >>>>>>>
+const ReviewListService = async (req) => {
+    try {
+        let ProductID = new ObjectID(req.params.ProductID);
+        let MatchStage = {$match: {productID: ProductID}};
+        let JoinWithProfileStage = {
+            $lookup: {
+                from: "profiles",
+                localField: "userID",
+                foreignField: "userID",
+                as: "profile",
+            },
+        };
+        let UnwindProfileStage = {$unwind : "$profile"};
+
+        let ProjectionStage = {
+            $project: {
+                'des': 1,
+                'rating': 1,
+                'profile.cus_name': 1
+            }
+        };
+
+        let data = await ReviewModel.aggregate([
+            MatchStage,
+            JoinWithProfileStage,
+            UnwindProfileStage,
+            ProjectionStage
+        ]);
+
+        return {status: "Success", data: data};
+    }
+    catch (e) {
+        return {status: "Fail", data: e}.toString();
+    }
+};
 // <<<<< ---------- Working Here Now ------------ >>>>>>>
 
 
-const ReviewListService = async () => {
-};
+
 
 module.exports = {
     BrandListService,
