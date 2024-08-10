@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middlewares/AuthVerification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/AuthVerification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/UserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Infos.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/UserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/TokenHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/TokenHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +36,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.NJ.executor": "Debug",
+    "Node.js.UserServices.js.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Running Works/02. ostad-mern-all-things/mern-practises/e-commerce-app-mern/src/services/UserServices.js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="NJ" type="NodeJSConfigurationType" path-to-js-file="src/services/UserServices.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,6 +76,7 @@
       <workItem from="1723140536756" duration="13693000" />
       <workItem from="1723236444111" duration="1385000" />
       <workItem from="1723283900215" duration="7734000" />
+      <workItem from="1723315118918" duration="2387000" />
     </task>
     <servers />
   </component>

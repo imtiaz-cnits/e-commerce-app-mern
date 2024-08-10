@@ -30,7 +30,7 @@ const VerifyOTPService = async (req) => {
     let otp = req.params.otp;
 
     // User count
-    let total = await UserModel.find({ email: email, otp: otp }).count("total");
+    let total = await UserModel.find({ email: email, otp: otp }).countDocuments("total");
 
     if (total === 1) {
       let user_id = await UserModel.find({ email: email, otp: otp }).select(

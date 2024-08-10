@@ -47,6 +47,26 @@ Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mong
 13. Create 'middlewares' folder and create file named - 'AuthVerification.js', write codes in 'AuthVerification.js'.
 14.
 
+const VerifyOTPService = async (req) =>{
+try{
+let email = req.params.email;
+let otp = req.params.otp;
+let total = await UserModel.find({email:email, otp:otp}).countDocuments('total');
+//return {status:"success", message:total}
+if(total === 1){
+let user_id = await UserModel.findOne({email:email, otp:otp}).select('_id email');
+let token = EncodeToken(email, user_id._id)
+await UserModel.updateOne({email:email},{otp:0}, {upsert:true});
+return {status:"success", message:"Valid OTP", token:token};
+}else{
+return {status:"fail", message:"Invalid OTP"};
+}
+}
+catch (e) {
+return {status:"fail", message:"Invalid OTP"};
+}
+}
+
 
 
 
