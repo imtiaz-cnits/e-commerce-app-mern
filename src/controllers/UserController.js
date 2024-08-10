@@ -8,18 +8,17 @@ exports.UserOTP = async (req, res) => {
   return res.status(200).json(result);
 };
 
-exports.VerifyLogin = async (req, res) => {
+exports.VerifyOTP = async (req, res) => {
   let result = await VerifyOTPService(req);
 
   if (result["status"] === "success") {
-
-    // Cookies Option
+    // cookies option
     let cookieOption = {
-      expires: new Date(Date.now() + 24 * 6060 * 1000),
+      expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       httpOnly: false,
     };
 
-    // Set Cookie with response
+    // set cookies with response
     res.cookie("token", result["token"], cookieOption);
     return res.status(200).json(result);
   } else {

@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/middlewares/AuthVerification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/EmailHelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/TokenHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Infos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dummy-data/Emial_SMTP.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dummy-data/Email_SMTP.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProductController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/AuthVerification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/AuthVerification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/UserModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ProductServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/UserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/TokenHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/TokenHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +71,7 @@
       <updated>1723140534290</updated>
       <workItem from="1723140536756" duration="13693000" />
       <workItem from="1723236444111" duration="1385000" />
+      <workItem from="1723283900215" duration="7734000" />
     </task>
     <servers />
   </component>
