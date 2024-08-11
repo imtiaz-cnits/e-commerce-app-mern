@@ -28,28 +28,48 @@ const VerifyOTPService = async (req) => {
   try {
     let email = req.params.email;
     let otp = req.params.otp;
-
-    // User count
-    let total = await UserModel.find({ email: email, otp: otp }).countDocuments("total");
+    let total = await UserModel.find({ email: email, otp: otp }).count("total");
 
     if (total === 1) {
       let user_id = await UserModel.find({ email: email, otp: otp }).select(
-        "_id"
+          "_id"
       );
       let token = EncodeToken(email, user_id[0]["_id"].toString());
 
-      await UserModel.updateOne({ email: email }, { $set: { otp: 0 } });
+      await UserModel.updateOne({ email: email }, { $set: { otp: "0" } });
 
-      return { status: "success", message: "Valid OTP", token: token };
+      return {status: "success", message: "Valid OTP", token: token,};
+    } else {
+      return {status: "fail", message: "Invalid OTP",};
     }
-    else {
-      return { status: "fail", message: "Invalid OTP" };
-    }
-  }
-  catch (e) {
-    return { status: "fail", message: "Invalid OTP" };
+  } catch (e) {
+    return {status: "fail", message: "Invalid OTP",};
   }
 };
+
+// const VerifyOTPService = async (req) => {
+//   try {
+//     let email = req.params.email;
+//     let otp = req.params.otp;
+//     let total = await UserModel.find({ email: email, otp: otp }).countDocuments(("_id"));
+//
+//     if (total === 1) {
+//       let user_id = await UserModel.find({ email: email, otp: otp }).select("_id");
+//
+//       let token = EncodeToken(email, user_id[0]["_id"].toString());
+//
+//       await UserModel.updateOne({ email: email }, { $set: { otp: "0" } });
+//
+//       return {status: "success", message: "Valid OTP", token: token,};
+//     } else {
+//       return {status: "fail", message: "Invalid OTP",
+//       };
+//     }
+//   } catch (e) {
+//     return {status: "fail", message: `Something went wrong ${e}`,
+//     };
+//   }
+// };
 
 module.exports = {
   UserOTPService,
