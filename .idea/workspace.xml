@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/CartListController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/CartListController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/InvoiceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/InvoiceController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/WishListController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/WishListController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/CartModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/CartModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/UserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/CartListServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CartListServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/InvoiceServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/InvoiceServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/WishListServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/WishListServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +57,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "settings.editor.selected.configurable": "terminal",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -79,7 +87,7 @@
       <workItem from="1723283900215" duration="7734000" />
       <workItem from="1723315118918" duration="3132000" />
       <workItem from="1723358487718" duration="1063000" />
-      <workItem from="1723359729985" duration="10834000" />
+      <workItem from="1723359729985" duration="20233000" />
     </task>
     <servers />
   </component>
