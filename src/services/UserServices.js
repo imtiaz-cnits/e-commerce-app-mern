@@ -1,5 +1,6 @@
 const EmailSend = require("../utility/EmailHelper");
 const UserModel = require("../models/UserModel");
+const ProfileModel = require("../models/ProfileModel");
 
 const { EncodeToken } = require("../utility/TokenHelper");
 
@@ -47,31 +48,38 @@ const VerifyOTPService = async (req) => {
   }
 };
 
-// const VerifyOTPService = async (req) => {
-//   try {
-//     let email = req.params.email;
-//     let otp = req.params.otp;
-//     let total = await UserModel.find({ email: email, otp: otp }).countDocuments(("_id"));
-//
-//     if (total === 1) {
-//       let user_id = await UserModel.find({ email: email, otp: otp }).select("_id");
-//
-//       let token = EncodeToken(email, user_id[0]["_id"].toString());
-//
-//       await UserModel.updateOne({ email: email }, { $set: { otp: "0" } });
-//
-//       return {status: "success", message: "Valid OTP", token: token,};
-//     } else {
-//       return {status: "fail", message: "Invalid OTP",
-//       };
-//     }
-//   } catch (e) {
-//     return {status: "fail", message: `Something went wrong ${e}`,
-//     };
-//   }
-// };
+const SaveProfileService = async (req) => {
+  try {
+    let user_id = req.headers.user_id;
+    let reqBody = req.body;
+    reqBody.user_id = user_id;
+    await ProfileModel.updateOne(
+        {userID: user_id},
+        { $set: reqBody},
+        { upsert: true }
+    );
+    return {status: "Success", message: "Profile Save Successfully"};
+  }
+  catch (e) {
+    return {status: "fail", message: "Something went wrong.."};
+  }
+};
+
+const ReadProfileService = async (req) => {
+  try {
+    let user_id = req.headers.user_id;
+    let result = await ProfileModel.find({userID: user_id});
+    return {status: "Success", data: result};
+  }
+  catch (e) {
+    return {status: "fail", message: "Something went wrong.."};
+  }
+}
+
 
 module.exports = {
   UserOTPService,
   VerifyOTPService,
+  SaveProfileService,
+  ReadProfileService,
 };
