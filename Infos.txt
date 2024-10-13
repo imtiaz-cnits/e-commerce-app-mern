@@ -3,7 +3,7 @@ DB Info -
 User - ia64744
 Pass - 92hT09Zwqu48M7De
 
-Connection String - mongodb+srv://ia64744:92hT09Zwqu48M7De@cluster0.zfowx7c.mongodb.net/
+Connection String - mongodb+srv://ia64744:E3Rlz6z2VzipxJCa@cluster0.zfowx7c.mongodb.net/
 
 
 // Process of Start working on projects
