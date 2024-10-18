@@ -342,8 +342,6 @@ const DetailsService = async (req) => {
 };
 
 
-
-// <<<<< ---------- Working Here Now ------------ >>>>>>>
 const ReviewListService = async (req) => {
     try {
         let ProductID = new ObjectID(req.params.ProductID);
@@ -379,10 +377,6 @@ const ReviewListService = async (req) => {
         return {status: "Fail", data: e}.toString();
     }
 };
-// <<<<< ---------- Working Here Now ------------ >>>>>>>
-
-
-
 
 module.exports = {
     BrandListService,
