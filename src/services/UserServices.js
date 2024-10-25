@@ -27,24 +27,37 @@ const UserOTPService = async (req) => {
 
 const VerifyOTPService = async (req) => {
   try {
-    let email = req.params.email;
-    let otp = req.params.otp;
-    let total = await UserModel.find({ email: email, otp: otp }).count("total");
+    const email = req.params.email.toLowerCase(); // Consistent casing
+    const otp = req.params.otp;
 
-    if (total === 1) {
-      let user_id = await UserModel.find({ email: email, otp: otp }).select(
-          "_id"
-      );
-      let token = EncodeToken(email, user_id[0]["_id"].toString());
+    // Find user by email and OTP
+    const user = await UserModel.findOne({ email: email, otp: otp });
 
+    // Check if a matching user was found
+    if (user) {
+      // Encode token with user id
+      const token = EncodeToken(email, user._id.toString());
+
+      // Reset OTP to prevent reuse
       await UserModel.updateOne({ email: email }, { $set: { otp: "0" } });
 
-      return {status: "success", message: "Valid OTP", token: token,};
+      return {
+        status: "success",
+        message: "Valid OTP",
+        token: token,
+      };
     } else {
-      return {status: "fail", message: "Invalid OTP",};
+      return {
+        status: "fail",
+        message: "Invalid OTP",
+      };
     }
   } catch (e) {
-    return {status: "fail", message: "Invalid OTP",};
+    console.error("Error in OTP verification:", e); // Log the error
+    return {
+      status: "fail",
+      message: "An error occurred during OTP verification",
+    };
   }
 };
 
@@ -54,28 +67,25 @@ const SaveProfileService = async (req) => {
     let reqBody = req.body;
     reqBody.user_id = user_id;
     await ProfileModel.updateOne(
-        {userID: user_id},
-        { $set: reqBody},
-        { upsert: true }
+      { userID: user_id },
+      { $set: reqBody },
+      { upsert: true }
     );
-    return {status: "Success", message: "Profile Save Successfully"};
-  }
-  catch (e) {
-    return {status: "fail", message: "Something went wrong.."};
+    return { status: "Success", message: "Profile Save Successfully" };
+  } catch (e) {
+    return { status: "fail", message: "Something went wrong.." };
   }
 };
 
 const ReadProfileService = async (req) => {
   try {
     let user_id = req.headers.user_id;
-    let result = await ProfileModel.find({userID: user_id});
-    return {status: "Success", data: result};
+    let result = await ProfileModel.find({ userID: user_id });
+    return { status: "Success", data: result };
+  } catch (e) {
+    return { status: "fail", message: "Something went wrong.." };
   }
-  catch (e) {
-    return {status: "fail", message: "Something went wrong.."};
-  }
-}
-
+};
 
 module.exports = {
   UserOTPService,
