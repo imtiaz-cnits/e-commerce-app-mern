@@ -185,6 +185,9 @@ const PaymentIPNService = async (req) => {
 
 const InvoiceListService = async (req) => {
   try {
+    let user_id = req.headers.user_id;
+    let invoice = await InvoiceModel.find({ userID: user_id });
+    return { status: "success", data: invoice };
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }
@@ -192,6 +195,27 @@ const InvoiceListService = async (req) => {
 
 const InvoiceProductListService = async (req) => {
   try {
+    let user_id = new ObjectID(req.headers.user_id);
+    let invoice_id = new ObjectID(req.params.invoice_id);
+
+    let matchStage = { $match: { userID: user_id, invoiceID: invoice_id } };
+    let JoinStageProduct = {
+      $lookup: {
+        from: "products",
+        localField: "productID",
+        foreignField: "_id",
+        as: "product",
+      },
+    };
+    let unwindStage = { $unwind: "$product" };
+
+    let products = await InvoiceProductModel.aggregate([
+      matchStage,
+      JoinStageProduct,
+      unwindStage,
+    ]);
+
+    return { status: "success", data: products };
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }

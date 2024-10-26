@@ -4,9 +4,11 @@ const UserController = require("../controllers/UserController");
 const WishListController = require("../controllers/WishListController");
 const CartListController = require("../controllers/CartListController");
 const InvoiceController = require("../controllers/InvoiceController");
+const FeaturesController = require("../controllers/FeaturesController");
 
 
 const AuthVerification = require("../middlewares/AuthVerification");
+const {FeaturesList} = require("../controllers/FeaturesController");
 const router = express.Router();
 
 // Products API
@@ -52,6 +54,10 @@ router.post("/PaymentSuccess/:trxID", InvoiceController.PaymentSuccess);
 router.post("/PaymentCancel/:trxID", InvoiceController.PaymentCancel);
 router.post("/PaymentFail/:trxID", InvoiceController.PaymentFail);
 router.post("/PaymentIPN/:trxID", InvoiceController.PaymentIPN);
+
+//Features
+router.get("/FeaturesList", FeaturesController.FeaturesList);
+
 
 
 module.exports = router;
