@@ -15,7 +15,7 @@ exports.CreateInvoice = async (req, res) => {
 }
 
 exports.PaymentSuccess = async (req, res) => {
-    let result = await PaymentSuccessService(req);
+    let result = await PaymentSuccessService(req);   
     return res.redirect('/orders');
 }
 

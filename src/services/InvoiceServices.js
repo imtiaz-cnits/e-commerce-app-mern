@@ -69,17 +69,75 @@ const CreateInvoiceService = async (req) => {
   });
 
   // ================== Step 05: Create Invoice Product ==================== //
+  let invoice_id = createInvoice["_id"];
+  CartProducts.forEach(async (element) => {
+    await InvoiceProductModel.create({
+      userID: user_id,
+      productID: element["productID"],
+      invoiceID: invoice_id,
+      qty: element["qty"],
+      price: element["product"]["discount"] ? element["product"]["discountPrice"] : element["product"]["price"],
+      size: element["size"],
+      color: element["color"],
+    });
+  });
 
+  // ================== Step 06: Remove Cart ==================== //
+  await CartModel.deleteMany({userID: user_id});
 
+  // ================== Step 07: Prepare SSL Commerz Payment ==================== //
+  let PaymentSettings = await PaymentSettingModel.find();
 
+  const form = new FormData();
+  form.append("store_id", PaymentSettings[0]["store_id"]);
+  form.append("store_passwd", PaymentSettings[0]["store_passwd"]);
+  form.append("total_amount", payable.toString());
+  form.append("currency", PaymentSettings[0]["currency"]);
+  form.append("tran_id", tran_id);
 
+  form.append("success_url", `${PaymentSettings[0]["success_url"]}/${tran_id}`);
+  form.append("fail_url", `${PaymentSettings[0]["fail_url"]}/${tran_id}`);
+  form.append("cancel_url", `${PaymentSettings[0]["cancel_url"]}/${tran_id}`);
+  form.append("ipn_url", `${PaymentSettings[0]["ipn_url"]}/${tran_id}`);
 
+  form.append("cus_name", Profile[0]["cus_name"]);
+  form.append("cus_email", cus_email);
+  form.append("cus_add1", Profile[0]["cus_add"]);
+  form.append("cus_add2", Profile[0]["cus_add"]);
+  form.append("cus_city", Profile[0]["cus_city"]);
+  form.append("cus_state", Profile[0]["cus_state"]);
+  form.append("cus_postcode", Profile[0]["cus_postcode"]);
+  form.append("cus_country", Profile[0]["cus_country"]);
+  form.append("cus_phone", Profile[0]["cus_phone"]);
+  form.append("cus_fax", Profile[0]["cus_fax"]);
 
-  return { status: "success", data: Profile };
+  form.append("shipping_method", "YES");
+  form.append("ship_name", Profile[0]["ship_name"]);
+  form.append("ship_add1", Profile[0]["ship_add"]);
+  form.append("ship_add2", Profile[0]["ship_add"]);
+  form.append("ship_city", Profile[0]["ship_city"]);
+  form.append("ship_state", Profile[0]["ship_state"]);
+  form.append("ship_postcode", Profile[0]["ship_postcode"]);
+  form.append("ship_country", Profile[0]["ship_country"]);
+
+  form.append("product_name", "According Invoice");
+  form.append("product_category", "According Invoice");
+  form.append("product_profile", "According Invoice");
+  form.append("product_amount", "According Invoice");
+
+  let SSLRes = await axios.post(PaymentSettings[0]["init_url"], form);
+
+  return { status: "success", data: SSLRes.data };
 };
 
 const PaymentSuccessService = async (req) => {
   try {
+    let trxID = req.params.trxID;
+    await InvoiceModel.updateOne(
+      {tran_id: trxID},
+      {payment_status: "success"}
+    );
+    return {status: "success"};
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }
@@ -87,6 +145,12 @@ const PaymentSuccessService = async (req) => {
 
 const PaymentFailService = async (req) => {
   try {
+    let trxID = req.params.trxID;
+    await InvoiceModel.updateOne(
+      {tran_id: trxID},
+      {payment_status: "fail"}
+    );
+    return {status: "fail"};
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }
@@ -94,6 +158,12 @@ const PaymentFailService = async (req) => {
 
 const PaymentCancelService = async (req) => {
   try {
+    let trxID = req.params.trxID;
+    await InvoiceModel.updateOne(
+      {tran_id: trxID},
+      {payment_status: "cancel"}
+    );
+    return {status: "cancel"};
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }
@@ -101,6 +171,13 @@ const PaymentCancelService = async (req) => {
 
 const PaymentIPNService = async (req) => {
   try {
+    let trxID = req.params.trxID;
+    let status = req.body["status"];
+    await InvoiceModel.updateOne(
+      {tran_id: trxID},
+      {payment_status: status}
+    );
+    return {status: "success"};
   } catch (e) {
     return { status: "fail", message: `Something went wrong.. ${e}` };
   }
