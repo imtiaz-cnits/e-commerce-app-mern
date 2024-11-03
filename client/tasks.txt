@@ -1,0 +1,21 @@
+1. Scaffold React with Express
+    - Create new react app folder name "client" using vite.
+    - Ensure back-end proxy settings in vite.config.js.
+    - Add react build files with express back-end.
+    - Manage front-end routing condition in express back-end.
+
+2. Front End Packages
+    - axios
+    - bootstrap
+    - bootstrap-icons
+    - html-react-parser
+    - js-cookie
+    - lottie-react
+    - react-bootstrap
+    - react-hot-toast
+    - react-image-gallery
+    - react-loading-skeleton
+    - react-router-dom
+    - react-star-ratings
+    - sweetalert2
+    - zustand
