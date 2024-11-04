@@ -8,45 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/features/features.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/layout/appNavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/layout/footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/layout/layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/product/brands.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/product/categories.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/product/products.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/product/slider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/home-page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/skeleton/brands-skeleton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/skeleton/categories-skeleton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/skeleton/features-skeleton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/skeleton/slider-skeleton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/CartStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/FeatureStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/InvoiceStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/ProductStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/UserStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/WishStore.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/tasks.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/vite.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ProductController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProductController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ProductServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home-page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/skeleton/slider-skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/slider-skeleton.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +98,8 @@
       <workItem from="1730406422788" duration="45000" />
       <workItem from="1730406482786" duration="2346000" />
       <workItem from="1730666516441" duration="2841000" />
-      <workItem from="1730669399191" duration="4631000" />
+      <workItem from="1730669399191" duration="4803000" />
+      <workItem from="1730757872839" duration="578000" />
     </task>
     <servers />
   </component>
