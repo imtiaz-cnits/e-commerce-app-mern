@@ -1,19 +1,35 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from "../components/layout/layout.jsx";
-import SliderSkeleton from "../skeleton/slider-skeleton.jsx";
-import FeaturesSkeleton from "../skeleton/features-skeleton.jsx";
-import CategoriesSkeleton from "../skeleton/categories-skeleton.jsx";
-import ProductsSkeleton from "../skeleton/products-skeleton.jsx";
-import BrandsSkeleton from "../skeleton/brands-skeleton.jsx";
+import Brands from "../components/product/brands.jsx";
+import ProductStore from "../store/ProductStore.jsx";
+import FeatureStore from "../store/FeatureStore.jsx";
+import Slider from "../components/product/slider.jsx";
+import Features from "../components/features/features.jsx";
+import Categories from "../components/product/categories.jsx";
+import Products from "../components/product/products.jsx";
 
 const HomePage = () => {
+
+    const {BrandListRequest, CategoryListRequest, SliderListRequest, ListByRemarkRequest} = ProductStore();
+    const {FeaturesListRequest} = FeatureStore();
+
+    useEffect(() => {
+        (async () => {
+            await SliderListRequest();
+            await FeaturesListRequest();
+            await CategoryListRequest();
+            await ListByRemarkRequest("new");
+            await BrandListRequest();
+        })()
+    }, []);
+
     return (
         <Layout>
-            <SliderSkeleton/>
-            <FeaturesSkeleton/>
-            <CategoriesSkeleton/>
-            <ProductsSkeleton/>
-            <BrandsSkeleton/>
+            <Slider/>
+            <Features/>
+            <Categories/>
+            <Products/>
+            <Brands/>
         </Layout>
     );
 };

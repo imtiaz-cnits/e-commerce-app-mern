@@ -9,14 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/features/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/features/features.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/product/brands.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/brands.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/product/categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/product/products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/products.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/product/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/slider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home-page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/brands-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/brands-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/categories-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/categories-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/features-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/features-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/slider-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/slider-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/FeatureStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/FeatureStore.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/ProductStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/ProductStore.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +102,7 @@
       <workItem from="1730406482786" duration="2346000" />
       <workItem from="1730666516441" duration="2841000" />
       <workItem from="1730669399191" duration="4803000" />
-      <workItem from="1730757872839" duration="5538000" />
+      <workItem from="1730757872839" duration="11046000" />
     </task>
     <servers />
   </component>

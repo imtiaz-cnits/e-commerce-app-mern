@@ -1,4 +1,4 @@
-import create from "zustand";
+import create from 'zustand';
 import axios from "axios";
 
 const ProductStore = create((set) => ({
@@ -27,11 +27,11 @@ const ProductStore = create((set) => ({
         }
     },
 
-    ListByProduct: null,
-    ListByProductRequest: async (Remark) => {
+    ListByRemark: null,
+    ListByRemarkRequest: async (Remark) => {
         let res = await axios.get(`/api/v1/ProductListByRemark/${Remark}`);
         if (res.data['status'] === 'success') {
-            set({ListByProduct: res.data['data']});
+            set({ListByRemark: res.data['data']});
         }
     }
 
