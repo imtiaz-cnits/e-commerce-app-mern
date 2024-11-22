@@ -1,12 +1,12 @@
 import React from 'react';
-import ProductStore from "../../store/ProductStore.jsx";
+import ProductStore from "../../store/ProductStore.js";
 import CategoriesSkeleton from "../../skeleton/categories-skeleton.jsx";
 
 const Categories = () => {
 
-    const {CategoriesList} = ProductStore();
+    const {CategoryList} = ProductStore();
 
-    if (CategoriesList===null) {
+    if (CategoryList===null) {
         return <CategoriesSkeleton/>
     }
     else {

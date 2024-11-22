@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductStore from "../../store/ProductStore.jsx";
+import ProductStore from "../../store/ProductStore.js";
 import SliderSkeleton from "../../skeleton/slider-skeleton.jsx";
 
 const Slider = () => {

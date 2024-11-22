@@ -1,10 +1,10 @@
 import React from 'react';
-import ProductStore from "../../store/ProductStore.jsx";
+import FeatureStore from "../../store/FeatureStore.js";
 import FeaturesSkeleton from "../../skeleton/features-skeleton.jsx";
 
 const Features = () => {
 
-    const {FeatureList} = ProductStore();
+    const {FeatureList} = FeatureStore();
 
     if (FeatureList===null) {
         return <FeaturesSkeleton/>
