@@ -8,23 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/product/practise.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/features/features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/features/features.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/product/brands.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/brands.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/product/categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/product/products.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/products.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/product/slider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/slider.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/home-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home-page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/brands-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/brands-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/categories-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/categories-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/features-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/features-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/skeleton/products-skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/CartStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/CartStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/FeatureStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/FeatureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/InvoiceStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/InvoiceStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/ProductStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/ProductStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/UserStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/UserStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/WishStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/WishStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/FeatureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/FeatureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ProductServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +105,8 @@
       <workItem from="1731609842895" duration="2150000" />
       <workItem from="1732133045643" duration="179000" />
       <workItem from="1732133259149" duration="5079000" />
-      <workItem from="1732265915117" duration="8091000" />
+      <workItem from="1732265915117" duration="8942000" />
+      <workItem from="1732476075581" duration="7269000" />
     </task>
     <servers />
   </component>

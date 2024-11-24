@@ -10,7 +10,7 @@ const ObjectID = mongoose.Types.ObjectId;
 const BrandListService = async () => {
     try {
         let data = await BrandModel.find();
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -19,7 +19,7 @@ const BrandListService = async () => {
 const CategoryListService = async () => {
     try {
         let data = await CategoryModel.find();
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -28,7 +28,7 @@ const CategoryListService = async () => {
 const SliderListService = async () => {
     try {
         let data = await ProductSliderModel.find();
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -78,7 +78,7 @@ const ListByBrandService = async (req) => {
             ProjectionStage,
         ]);
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -127,7 +127,7 @@ const ListByCategoryService = async (req) => {
             ProjectionStage,
         ]);
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -178,7 +178,7 @@ const ListBySimilarService = async (req) => {
             ProjectionStage,
         ]);
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -231,7 +231,7 @@ const ListByKeywordService = async (req) => {
             UnwindCategoryStage,
             ProjectionStage,
         ]);
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     }
     catch (e) {
         return {status: "Fail", data: e}.toString();
@@ -281,7 +281,7 @@ const ListByRemarkService = async (req) => {
             ProjectionStage,
         ]);
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     } catch (e) {
         return {status: "Fail", data: e}.toString();
     }
@@ -334,7 +334,7 @@ const DetailsService = async (req) => {
             ProjectionStage
         ])
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     }
     catch (e) {
         return {status: "Fail", data: e}.toString();
@@ -371,7 +371,7 @@ const ReviewListService = async (req) => {
             ProjectionStage
         ]);
 
-        return {status: "Success", data: data};
+        return {status: "success", data: data};
     }
     catch (e) {
         return {status: "Fail", data: e}.toString();

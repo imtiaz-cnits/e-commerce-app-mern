@@ -12,12 +12,12 @@ import Products from "../components/product/products.jsx";
 const HomePage = () => {
 
     const {BrandListRequest,CategoryListRequest,SliderListRequest,ListByRemarkRequest}=ProductStore();
-    const {FeatureListRequest}=FeatureStore();
+    const {FeaturesListRequest}=FeatureStore();
 
     useEffect(() => {
         (async ()=>{
             await SliderListRequest();
-            await FeatureListRequest();
+            await FeaturesListRequest();
             await CategoryListRequest();
             await ListByRemarkRequest("new");
             await BrandListRequest()

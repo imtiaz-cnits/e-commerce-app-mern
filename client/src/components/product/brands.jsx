@@ -1,6 +1,8 @@
 import React from 'react';
 import ProductStore from "../../store/ProductStore.js";
 import BrandsSkeleton from "../../skeleton/brands-skeleton.jsx";
+import { Link } from 'react-router-dom';
+
 
 const Brands = () => {
 
@@ -19,7 +21,7 @@ const Brands = () => {
                             className="bodySmal mb-5 text-center">Explore a World of Choices Across Our Most Popular <br
                         />Shopping Categories </span>
                         {
-                            BrandList.map((item, i) => () => {
+                            BrandList.map((item, i) => {
                                 return (
                                     <div key={i} className="col-6 col-lg-8r text-center col-md-8r p-2">
                                         <Link to="" className="card h-100 rounded-3 bg-white">
