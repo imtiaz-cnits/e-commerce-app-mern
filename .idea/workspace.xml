@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed3c4bb1-6e95-4b92-9c9a-fb215fdb23ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/product/practise.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/product/brands.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/product/brands.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/home-page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home-page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/FeatureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/FeatureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ProductServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ProductServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +50,14 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/02. Power House Bckp/Running Works/05. Practise Projects/e-commerce-app-mern&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/02. Power House Bckp/Running Works/05. Practise Projects/e-commerce-app-mern&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Odyssey\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Imtiaz Ahmed\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -73,7 +69,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +103,10 @@
       <workItem from="1732133259149" duration="5079000" />
       <workItem from="1732265915117" duration="8942000" />
       <workItem from="1732476075581" duration="7269000" />
+      <workItem from="1736304573312" duration="43000" />
+      <workItem from="1736304618699" duration="1634000" />
+      <workItem from="1737459755917" duration="2547000" />
+      <workItem from="1737879982227" duration="470000" />
     </task>
     <servers />
   </component>

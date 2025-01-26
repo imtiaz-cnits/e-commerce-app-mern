@@ -13,7 +13,7 @@ const path = require("path");
 
 //Database Connection
 let URL =
-  "mongodb+srv://ia64744:E3Rlz6z2VzipxJCa@cluster0.zfowx7c.mongodb.net/MERN_ECOMM";
+  "mongodb+srv://ia64744:2kZgMZ6jaYYIiV2R@cluster0.zfowx7c.mongodb.net/MERN_ECOMM";
 let option = {
   user: "",
   pass: "",
